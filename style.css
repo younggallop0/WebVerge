@@ -1,0 +1,412 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+nav .nav-item>a:hover {
+  border-bottom: solid 2px #0d6efd;
+  color: #0d6efd;
+}
+
+section>div {
+  padding-top: 40px;
+}
+
+
+.nav-container {
+  position: fixed;
+  z-index: 5;
+  min-width: 100%;
+  margin-inline: auto;
+  background-color: white;
+  padding-bottom: 0;
+}
+
+
+.hero {
+  background: #f8f9fc;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.colum div {
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.dis {
+  display: flex;
+  align-items: center;
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: .75rem;
+}
+
+.dc {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.projects {
+  background: #f8f9fa;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  border: none;
+}
+
+.lor {
+  color: #141313 !important;
+  background-color: #e9ecef !important;
+}
+
+#about>div>div>div>div {
+  margin-bottom: 10px;
+}
+
+/* Services page css */
+.grad1 {
+  height: 300px;
+  background-image: linear-gradient(to right, rgb(12, 98, 228), rgba(255, 0, 0, 0));
+}
+
+/*  */
+.size {
+  text-decoration: none;
+  color: black;
+}
+
+.co {
+  color: #d1d9e2;
+}
+
+
+@media (max-width: 960px) {
+  .pdf svg {
+    display: none;
+  }
+
+  #about .border-end {
+    border-right: none !important;
+  }
+
+  /* Add vertical line */
+  .step {
+    border-left: 3px solid #0d6efd;
+    /* Bootstrap primary color */
+    padding-left: 20px;
+    position: relative;
+  }
+
+  /* Optional: add a dot (like timeline UI) */
+  .step::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    background: #0d6efd;
+    border-radius: 50%;
+  }
+
+  .bac {
+    background-color: #0d6efd;
+  }
+
+  nav .nav-item>a:hover {
+    color: #0d6efd;
+    border-bottom: none;
+  }
+
+  nav .nav-item>.btn:hover {
+    color: #d1d9e2;
+  }
+}
+
+.image {
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.ggp {
+  border-radius: 10px;
+}
+
+.sc {
+  text-align: center;
+}
+
+/* javascript animation */
+
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.portfolio-modal {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  animation: slideUp 0.4s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.portfolio-modal img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+[data-animate].animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio-filter li.active {
+  background: #007bff;
+  color: white;
+}
+
+.portfolio-item {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+
+/* Standout Behaviors */
+.service-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  border-color: #0d6efd !important;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0d6efd, #6610f2, #0d6efd);
+  background-size: 200% 100%;
+  transition: left 0.5s ease;
+}
+
+.service-card:hover::before {
+  left: 0;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.service-icon {
+  transition: all 0.3s ease;
+  filter: grayscale(50%);
+}
+
+.service-card:hover .service-icon {
+  filter: grayscale(0);
+  transform: scale(1.2) rotate(10deg);
+  color: #0d6efd !important;
+}
+
+.service-card h3 {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover h3 {
+  color: #0d6efd !important;
+}
+
+/* Process Steps */
+.step {
+  transition: all 0.4s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.step:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: #0d6efd;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.step:hover::after {
+  opacity: 1;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateY(-50%) scale(1.2);
+  }
+
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+.step h5 {
+  transition: all 0.3s ease;
+}
+
+.step:hover h5 {
+  color: #0d6efd;
+  text-shadow: 0 2px 4px rgba(13, 110, 253, 0.3);
+}
+
+/* Hero pulse animation */
+.grad1 {
+  animation: heroPulse 3s ease-in-out infinite;
+}
+
+@keyframes heroPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
